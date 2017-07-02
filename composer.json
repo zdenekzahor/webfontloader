@@ -1,0 +1,20 @@
+{
+    "name": "zdenekzahor/webfontloader",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Zdeněk Zahoř",
+            "email": "zdenek.zahor@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ZdenekZahor\\WebFontLoader\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.1",
+        "nette/application": "^3.0",
+        "nette/di": "^3.0"
+    }
+}

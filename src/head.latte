@@ -1,0 +1,14 @@
+{if $isCached}
+    <link rel="stylesheet" href="{$fontLink}" media="all">
+{else}
+    <script>
+        WebFontConfig = {
+            google: { families: {$families} },
+            active: function () {
+                document.cookie = '{$cookieName|noescape}=1; expires=' + (new Date(new Date().getTime() + 86400000)).toGMTString() + '; path=/'
+            }
+        };
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" async defer></script>
+    <link rel="prefetch" href="{$fontLink}">
+{/if}
