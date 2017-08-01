@@ -23,6 +23,7 @@ webFontLoader:
 
 ```php
 use ZdenekZahor\WebFontLoader\IWebFontLoaderFactory;
+use ZdenekZahor\WebFontLoader\WebFontLoader;
 
 /**
  * @var IWebFontLoaderFactory
@@ -30,7 +31,7 @@ use ZdenekZahor\WebFontLoader\IWebFontLoaderFactory;
  */
 public $webFontLoaderFactory;
 
-protected function createComponentWebFontLoader()
+protected function createComponentWebFontLoader(): WebFontLoader
 {
     return $this->webFontLoaderFactory->create();
 }
