@@ -24,14 +24,14 @@ class WebFontLoader extends Control
         $this->httpRequest = $httpRequest;
     }
 
-    public function renderHtmlClass(): void
+    public function renderHtmlClass()
     {
         if ($this->httpRequest->getCookie($this->cookieName)) {
             echo 'wf-active';
         }
     }
 
-    public function renderHead(): void
+    public function renderHead()
     {
         $template = $this->template;
         $template->setFile(__DIR__ . '/head.latte');

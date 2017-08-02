@@ -8,7 +8,7 @@ use ZdenekZahor\WebFontLoader\IWebFontLoaderFactory;
 
 class WebFontLoaderExtension extends CompilerExtension
 {
-    public function loadConfiguration(): void
+    public function loadConfiguration()
     {
         $builder = $this->getContainerBuilder();
 
