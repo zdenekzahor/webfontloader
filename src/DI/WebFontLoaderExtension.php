@@ -11,11 +11,9 @@ class WebFontLoaderExtension extends CompilerExtension
     public function loadConfiguration(): void
     {
         $builder = $this->getContainerBuilder();
-
-        $service = new ServiceDefinition();
-        $service->setImplement(IWebFontLoaderFactory::class);
-        $service->setArguments([$this->config['cookieName'], $this->config['families']]);
-
-        $builder->addDefinition($this->prefix('webFontLoaderFactory'), $service);
+        $builder
+            ->addFactoryDefinition($this->prefix('webFontLoaderFactory'))
+            ->setImplement(IWebFontLoaderFactory::class)
+            ->getResultDefinition()->setArguments([$this->config['cookieName'], $this->config['families']]);
     }
 }

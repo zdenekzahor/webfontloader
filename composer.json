@@ -14,7 +14,7 @@
     },
     "require": {
         "php": ">=7.1",
-        "nette/application": "^3.0",
+        "nette/application": "^3.1",
         "nette/di": "^3.0"
     },
     "config": {
